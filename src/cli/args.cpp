@@ -13,15 +13,15 @@ void helpflag(){
 int main(int argc, char *argv[]){
     char answer; // this is logic for "are you sure you want to install? Y/n"
 
-    if (argc != 3){
-        std::cout<<"Incorrect usage, for help do 'neo --help' \n";
-        return 1;
-    }
-
     std::string command = argv[1];
 
     if (command == "--help"){
         helpflag();
+        return 1;
+    }
+
+    if (argc != 3){
+        std::cout<<"Incorrect usage, for help do 'neo --help' \n";
         return 1;
     }
 
