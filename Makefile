@@ -1,26 +1,29 @@
 CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++17
+CXXFLAGS = -Wall -Wextra -std=c++17 -I./src/cli -I./src/net -I./src/pkg -I./src/util
 
-SRC_DIR = src/cli
-BUILD_DIR = build/cli
-BIN_DIR = bin/cli
-
-SRCS = $(wildcard $(SRC_DIR)/*.cpp)
-OBJS = $(patsubst $(SRC_DIR)/%.cpp,$(BUILD_DIR)/%.o,$(SRCS))
+SRC_DIRS = src/cli src/net src/pkg src/util
+BUILD_DIR = build
+BIN_DIR = bin
 
 TARGET = $(BIN_DIR)/neo
+
+# find all .cpp files
+SRCS = $(foreach dir,$(SRC_DIRS),$(wildcard $(dir)/*.cpp))
+OBJS = $(patsubst %.cpp,$(BUILD_DIR)/%.o,$(SRCS))
 
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
 	@mkdir -p $(BIN_DIR)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $(OBJS)
 
-$(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
-	@mkdir -p $(BUILD_DIR)
+
+$(BUILD_DIR)/%.o: %.cpp
+	@mkdir -p $(dir $@)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(BUILD_DIR) $(TARGET)
 
 .PHONY: all clean
+
