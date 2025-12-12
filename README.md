@@ -34,3 +34,7 @@ and this is our PLAN (keyword) layout for our code incase you wanna commit or is
  │
  └── main.cpp (will link everything together)
 ```
+
+# dev team
+- Uzoth , he/him/his :3
+- Tib , he/him/his
