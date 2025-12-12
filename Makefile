@@ -7,7 +7,6 @@ BIN_DIR = bin
 
 TARGET = $(BIN_DIR)/neo
 
-# find all .cpp files
 SRCS = $(foreach dir,$(SRC_DIRS),$(wildcard $(dir)/*.cpp))
 OBJS = $(patsubst %.cpp,$(BUILD_DIR)/%.o,$(SRCS))
 
