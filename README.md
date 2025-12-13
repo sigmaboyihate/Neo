@@ -12,7 +12,8 @@ so basically, our design uses 'cells' which will be isolated package SYMLINKS (f
 
 and this is our PLAN (keyword) layout for our code incase you wanna commit or issues idk.
 
-```src/
+```
+src/
  ├── cli/
  │    └── args.cpp
  │
