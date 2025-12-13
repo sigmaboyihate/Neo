@@ -56,7 +56,7 @@ namespace neo {
             if (confirm(remsg)) {
                 std::cout << "Deleting package " << package << "...\n";
             } else {
-                std::cout << "package removal aborted";
+                std::cout << "Package removal aborted";
             }
         }
 
