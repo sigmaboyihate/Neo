@@ -28,9 +28,9 @@ src/
  │
  │
  │── util/
- │    ├── 
- │    ├── 
- │    └── 
+ │    ├── parser.cpp
+ │    ├── parser.hpp
+ │    └── (idk)
  │
  └── main.cpp (will link everything together)
 ```
