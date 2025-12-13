@@ -9,7 +9,6 @@ Neo package manager
  └── index.json (contains git hash commit) 
  ```    
 so basically, our design uses 'cells' which will be isolated package SYMLINKS (for the actual package usage + after install).
-
 and this is our PLAN (keyword) layout for our code incase you wanna commit or issues idk.
 
 ```
@@ -35,7 +34,6 @@ src/
  │
  └── main.cpp (will link everything together)
 ```
-
 # dev team
 - Uzoth , he/him/his :3
 - Tib , he/him/his
