@@ -15,8 +15,8 @@ and this is our PLAN (keyword) layout for our code incase you wanna commit or is
 ```
 src/
  ├── cli/
- │    └── args.cpp
- │
+ │    ├── args.cpp
+ │    └── args.hpp
  ├── net/
  │    ├── download.hpp
  │    └── download.cpp
