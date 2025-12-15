@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++17 -I./src/cli -I./src/net -I./src/pkg -I./src/util
 
-SRC_DIRS = src/cli src/net src/pkg src/util
+SRC_DIRS = src/cli src/net src/pkg src/util src
 BUILD_DIR = build
 BIN_DIR = bin
 
