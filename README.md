@@ -16,9 +16,9 @@ src/
  ├── cli/
  │    ├── args.cpp
  │    └── args.hpp
- ├── net/
- │    ├── download.hpp
- │    └── download.cpp
+ ├── fs/
+ │    ├── cells.cpp
+ │    └── cells.hpp
  │
  ├── pkg/
  │    ├── cell.hpp
@@ -26,10 +26,14 @@ src/
  │    ├── install.hpp
  │    └── install.cpp
  │
- │
  │── util/
  │    ├── parser.cpp
  │    ├── parser.hpp
+ │    └── (more mod files?)
+ │
+ │── indexing/
+ │    ├── index.cpp
+ │    ├── index.hpp
  │    └── (idk)
  │
  └── main.cpp (will link everything together)
