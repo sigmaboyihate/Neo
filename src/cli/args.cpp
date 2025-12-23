@@ -1,4 +1,5 @@
 #include "args.hpp"
+#include <cells.hpp>
 #include <iostream>
 
 namespace neo {
@@ -7,6 +8,7 @@ namespace neo {
         void helpme() { // help menu
             std::cout << "You can read more in https://github.com/sigmaboyihate/Neo\n";
             std::cout << "----------------------\n";
+            std::cout << "neo init (basically inits root fs, ill add a home option soon!!!)\n";
             std::cout << "neo get <package>\n";
             std::cout << "neo sync\n";
             std::cout << "neo update\n";

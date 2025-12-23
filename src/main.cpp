@@ -1,8 +1,11 @@
 #include <args.hpp>
+#include <cells.hpp>
 #include <iostream>
 
 int main(int argc, char* argv[]){
     
+    neo::filesy::packagelayout layout("/neo"); // for fs
+
     if (argc < 2) {
         std::cout << "Incorrect usage, for help do: 'neo --help'\n";
         return 1;
@@ -13,6 +16,25 @@ int main(int argc, char* argv[]){
     if (command == "--help" || command == "-h" || command == "help"){
         neo::cli::helpme();
         return 0;
+    }
+
+    if (command == "init") {
+
+
+        if (!layout.init()) {
+            std::cerr << "Failed to initialize root dir (are you root bitch?)\n";
+            return 1;
+        }
+
+        std::cout << "neo initialized successfully/ or already initialized\n";
+        return 0;
+
+    }
+
+
+    if (!layout.init()) {
+        std::cerr << "Neo is not initialized. Run `neo init` as root.\n";
+        return 1;
     }
 
 
