@@ -22,7 +22,7 @@ int main(int argc, char* argv[]){
 
 
         if (!layout.init()) {
-            std::cerr << "Failed to initialize root dir (are you root bitch?)\n";
+            std::cerr << "Failed to initialize root dir (are you root <insert bad word>?)\n"; // bitch
             return 1;
         }
 
